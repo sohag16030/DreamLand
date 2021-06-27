@@ -8,14 +8,23 @@ namespace Auth.Demo.Controllers
 {
     public class NameController : Controller
     {
-        public IActionResult Index()
+        private readonly IJwtAuthenticationManager jwtAuthenticationManager;
+        
+        public NameController(IJwtAuthenticationManager jwtAuthenticationManager)
         {
-            return View();
+            this.jwtAuthenticationManager = jwtAuthenticationManager;
         }
+
         [HttpPost("authenticate")]
         public IActionResult Authenticate([FromBody] UserCred userCred)
         {
-            return Ok();
+          var token =  jwtAuthenticationManager.Authenticate(userCred.UserName, userCred.Password);
+            if (token == null)
+                return Unauthorized();
+            else
+                return Ok(token);
+
         }
+
     }
 }
