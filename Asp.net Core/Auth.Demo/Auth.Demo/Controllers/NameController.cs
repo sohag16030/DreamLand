@@ -14,8 +14,16 @@ namespace Auth.Demo.Controllers
         {
             this.jwtAuthenticationManager = jwtAuthenticationManager;
         }
+        
+        [HttpGet]
+        [Route("api/test")]
+        public IActionResult Hello()
+        {
+            return Ok("hello");
+        }
 
-        [HttpPost("authenticate")]
+        [HttpPost]
+        [Route("api/getAuthenticate")]
         public IActionResult Authenticate([FromBody] UserCred userCred)
         {
           var token =  jwtAuthenticationManager.Authenticate(userCred.UserName, userCred.Password);
