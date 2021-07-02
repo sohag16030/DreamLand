@@ -47,7 +47,6 @@
     <Folder Include="DTO\" />
     <Folder Include="IRepository\" />
     <Folder Include="IServices\" />
-    <Folder Include="Models\Write\" />
     <Folder Include="Repository\" />
     <Folder Include="Services\" />
   </ItemGroup>
