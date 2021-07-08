@@ -1,31 +1,27 @@
 using System;
-using System.Linq;
 using System.Text;
 using AspNetCoreRateLimit;
+
 using Elastic.Apm.NetCoreAll;
 using MediatR;
-using Microsoft.AspNet.OData.Builder;
-using Microsoft.AspNet.OData.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Authorization;
-using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.Net.Http.Headers;
-using Microsoft.OData.Edm;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
-using TestWeb.DbContexts;
-using TestWeb.ErrorHandling;
-using TestWeb.Helper;
 using Serilog;
 using Serilog.Exceptions;
 using Serilog.Sinks.Elasticsearch;
+using TestWeb.DbContexts;
+using TestWeb.ErrorHandling;
+using TestWeb.Helper;
 
 namespace TestWeb
 {
@@ -37,77 +33,63 @@ namespace TestWeb
             _env = env;
             Configuration = configuration;
         }
-        private void ConfigureEventBus(IApplicationBuilder app)
-        {
-            //var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
-          
-        }
-
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddNewtonsoftJson();
+            services.AddControllers();
             services.AddHttpContextAccessor();
-
             services.AddControllers().AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             });
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-             if (_env.IsProduction())
+            if (_env.IsProduction())
             {
                 string connection = Environment.GetEnvironmentVariable("ConnectionString");
                 services.AddDbContext<ReadDbContext>(options => options.UseSqlServer(connection), ServiceLifetime.Transient);
                 services.AddDbContext<WriteDbContext>(options => options.UseSqlServer(connection), ServiceLifetime.Transient);
                 Connection.erpm_procurement = connection;
+
             }
             else
             {
+                var data = Configuration.GetConnectionString("Development");
                 services.AddDbContext<ReadDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Development")), ServiceLifetime.Transient);
                 services.AddDbContext<WriteDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Development")), ServiceLifetime.Transient);
+
                 Connection.erpm_procurement = Configuration.GetConnectionString("Development");
             }
 
             services.AddControllers(opts =>
             {
-                //if (_env.IsProduction())
-                //{
-                //    var authenticatedUserPolicy = new AuthorizationPolicyBuilder()
-                //           .RequireAuthenticatedUser()
-                //           .Build();
-                //    opts.Filters.Add(new AuthorizeFilter(authenticatedUserPolicy));
-                   
-                //}
-                //else
-                //{
-                //    opts.Filters.Add<AllowAnonymousFilter>();
-                //}
-                opts.Filters.Add<AllowAnonymousFilter>();
+                if (_env.IsDevelopment())
+                {
+                    opts.Filters.Add<AllowAnonymousFilter>();
+                }
+                else
+                {
+                    var authenticatedUserPolicy = new AuthorizationPolicyBuilder()
+                              .RequireAuthenticatedUser()
+                              .Build();
+                    opts.Filters.Add(new AuthorizeFilter(authenticatedUserPolicy));
+                }
 
             });
 
-            
+
 
             JwtConfiguration(services);
-            
-            RegisterServices(services);
-            services.Configure<Helper.Audience>(Configuration.GetSection("Audience"));
-
-            services.AddControllers(mvcOptions =>
-                mvcOptions.EnableEndpointRouting = false)
-                .AddNewtonsoftJson(); 
-
-            services.AddOData();
             services.AddMediatR(typeof(Startup));
+            RegisterServices(services);
 
+            services.AddControllers().AddNewtonsoftJson();
 
             #region === serilog in elastic search
 
-            var elasticUri = "http://172.17.17.25:8064/";//Configuration["ElasticConfiguration:Uri"];
+            var elasticUri = "http://apilog.akij.net:9200/";//Configuration["ElasticConfiguration:Uri"];
 
             Log.Logger = new LoggerConfiguration()
                .Enrich.FromLogContext()
@@ -118,6 +100,7 @@ namespace TestWeb
                    AutoRegisterTemplate = true,
                })
             .CreateLogger();
+
 
             #endregion ================== close
 
@@ -157,21 +140,6 @@ namespace TestWeb
                     }
                 });
             });
-
-            //Odata for Swagger
-            services.AddMvcCore(options =>
-            {
-                foreach (var outputFormatter in options.OutputFormatters.OfType<OutputFormatter>().Where(x => x.SupportedMediaTypes.Count == 0))
-                {
-                    outputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
-                }
-
-                foreach (var inputFormatter in options.InputFormatters.OfType<InputFormatter>().Where(x => x.SupportedMediaTypes.Count == 0))
-                {
-                    inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
-                }
-            });
-
             #endregion ======================= close
 
             #region ==== Rate limit ======
@@ -193,20 +161,30 @@ namespace TestWeb
 
             // configuration (resolvers, counter key builders)
             services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+
             #endregion === Close ========
 
+            #region ====== Headder ===============
+
+            //services.AddHsts(options =>
+            //{
+            //    options.MaxAge = TimeSpan.FromDays(90);
+            //    options.IncludeSubDomains = true;
+            //    options.Preload = true;
+            //});
+            #endregion==========Header ==========
         }
 
-        private void RegisterServices(IServiceCollection services)
-        {
-            DependencyContainer.RegisterServices(services);
-        }
+        //private void ConfigureEventBus(IApplicationBuilder app)
+        //{
+        //    var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+        //}
 
         private void JwtConfiguration(IServiceCollection services)
         {
             var audienceConfig = Configuration.GetSection("Audience");
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(audienceConfig["Secret"]));
-           // var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_env.IsProduction() ? Configuration.GetSection("REACT_APP_SECRET_NAME").Value.Trim() : audienceConfig["Secret"]));
+            //var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_env.IsProduction() ? Configuration.GetSection("REACT_APP_SECRET_NAME").Value.Trim() : audienceConfig["Secret"]));
             var tokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
@@ -231,64 +209,60 @@ namespace TestWeb
             });
         }
 
+        private void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
+        }
+
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
-            app.UseIpRateLimiting(); 
-            
+            // app.UseIpRateLimiting(); 
             loggerFactory.AddSerilog();
             app.UseAllElasticApm(Configuration);
 
-             
 
-             app.UseCors(x => x
-                      .AllowAnyOrigin()
+
+            app.UseCors(x => x
+                     .AllowAnyOrigin()
                      .AllowAnyMethod()
-                    .AllowAnyHeader());
-
-            
+                     .AllowAnyHeader());
+            // app.UseCors();
 
             app.UseHttpsRedirection();
+
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseMiddleware<UserInfoMiddleware>();
+            // app.UseAntiXssMiddleware();
+            //app.UseMiddleware<DosAttackMiddleware>();
+
+
+
             app.ConfigureCustomExceptionMiddleware();
+
             if (!env.IsProduction())
             {
-                //Enable Swagger middleware and endpoint
                 app.UseSwagger(c =>
                 {
-                    c.RouteTemplate = "procurement/swagger/{documentName}/swagger.json";
+                    c.RouteTemplate = "imp/swagger/{documentName}/swagger.json";
                 });
 
-                //specifying the Swagger JSON endpoint.
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/procurement/swagger/v1/swagger.json", "procurement web service");
-                    c.RoutePrefix = "procurement/swagger";
+                    c.SwaggerEndpoint("/imp/swagger/v1/swagger.json", "imp");
+                    c.RoutePrefix = "imp/swagger";
                 });
             }
-          
-             
-            ConfigureEventBus(app);
+            //ConfigureEventBus(app);
 
-            
-            app.UseEndpoints(endpoint =>
+            app.UseEndpoints(endpoints =>
             {
-                endpoint.EnableDependencyInjection();
-                endpoint.Expand().Select().Count().Filter().OrderBy();
-               // endpoint.MapODataServiceRoute("identity", "identity", GetEdmModel());
-                endpoint.MapODataRoute(routeName: "procurement", routePrefix: "procurement", model: GetEdmModel());
-
+                endpoints.MapControllers();
             });
         }
-        private IEdmModel GetEdmModel()
-        {
-            var edmBuilder = new ODataConventionModelBuilder();
-            edmBuilder.EnableLowerCamelCase();
-            return edmBuilder.GetEdmModel();
-
-        }
-
     }
 }
