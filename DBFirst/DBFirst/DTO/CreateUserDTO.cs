@@ -7,7 +7,6 @@ namespace DBFirst.DTO
 {
     public class CreateUserDTO
     {
-        public int UserId { get; set; }
         public string UserName { get; set; }
     }
 }
