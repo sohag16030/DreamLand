@@ -9,28 +9,29 @@ using System.Threading.Tasks;
 
 namespace DBFirst.Repository
 {
-    public class User : IUser
+    public class Post : IPost
     {
         public readonly ReadDbContext _contextR;
         public readonly WriteDbContext _contextW;
-        public User(ReadDbContext contextR, WriteDbContext contextW)
+        public Post(ReadDbContext contextR, WriteDbContext contextW)
         {
             _contextR = contextR;
             _contextW = contextW;
         }
-        public async Task<MessageHelper> CreateUser(CreateUserDTO objCreate)
+        public async Task<MessageHelper> CreatePost(CreatePostDTO objCreate)
         {
-
-            var userObj = new Models.Write.TblUser
+            var postObj = new Models.Write.TblPost
             {
-                StrUserName = objCreate.UserName
+
+                StrPostDescription = objCreate.PostDescription,
+                IntUserId = objCreate.UserId
             };
 
-            await _contextW.TblUser.AddAsync(userObj);
+            await _contextW.TblPost.AddAsync(postObj);
             await _contextW.SaveChangesAsync();
 
             var msg = new MessageHelper();
-            msg.Message = "User Created Successfully";
+            msg.Message = "Post Created Successfully";
             msg.statuscode = 200;
 
             return msg;

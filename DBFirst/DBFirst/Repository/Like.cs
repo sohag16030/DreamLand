@@ -9,28 +9,29 @@ using System.Threading.Tasks;
 
 namespace DBFirst.Repository
 {
-    public class User : IUser
+    public class Like : ILike
     {
         public readonly ReadDbContext _contextR;
         public readonly WriteDbContext _contextW;
-        public User(ReadDbContext contextR, WriteDbContext contextW)
+        public Like(ReadDbContext contextR, WriteDbContext contextW)
         {
             _contextR = contextR;
             _contextW = contextW;
         }
-        public async Task<MessageHelper> CreateUser(CreateUserDTO objCreate)
+        public async Task<MessageHelper> CreateLike(CreateLikeDTO objCreate)
         {
-
-            var userObj = new Models.Write.TblUser
+            var likeObj = new Models.Write.TblLike
             {
-                StrUserName = objCreate.UserName
+
+                IntLikeId = objCreate.LikeId,
+                IntUserId = objCreate.UserId
             };
 
-            await _contextW.TblUser.AddAsync(userObj);
+            await _contextW.TblLike.AddAsync(likeObj);
             await _contextW.SaveChangesAsync();
 
             var msg = new MessageHelper();
-            msg.Message = "User Created Successfully";
+            msg.Message = "Liked Post Successfully";
             msg.statuscode = 200;
 
             return msg;

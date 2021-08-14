@@ -26,6 +26,11 @@ namespace DBFirst
             Configuration = configuration;
         }
 
+        private void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
+
+        }
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -38,7 +43,9 @@ namespace DBFirst
             services.AddDbContext<ReadDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Development")), ServiceLifetime.Transient);
             services.AddDbContext<WriteDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Development")), ServiceLifetime.Transient);
 
-            services.AddTransient<IUser, User>();
+            RegisterServices(services);
+            //services.AddTransient<IUser, User>();
+            //services.AddTransient<IPost, Post>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
