@@ -50,7 +50,6 @@ C:\DreamLand\DBFirst\DBFirst\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Mic
 C:\DreamLand\DBFirst\DBFirst\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\DreamLand\DBFirst\DBFirst\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\DreamLand\DBFirst\DBFirst\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\DreamLand\DBFirst\DBFirst\obj\Debug\netcoreapp3.1\DBFirst.csproj.AssemblyReference.cache
 C:\DreamLand\DBFirst\DBFirst\obj\Debug\netcoreapp3.1\DBFirst.AssemblyInfoInputs.cache
 C:\DreamLand\DBFirst\DBFirst\obj\Debug\netcoreapp3.1\DBFirst.AssemblyInfo.cs
 C:\DreamLand\DBFirst\DBFirst\obj\Debug\netcoreapp3.1\DBFirst.csproj.CoreCompileInputs.cache

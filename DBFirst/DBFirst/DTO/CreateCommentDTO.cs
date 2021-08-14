@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace DBFirst.DTO
 {
-    public class CreatePostDTO
+    public class CreateCommentDTO
     {
-        public string PostDescription { get; set; }
+        public string CommentDescription { get; set; }
         public int UserId { get; set; }
+        public int PostId { get; set; }
     }
 }

@@ -9,29 +9,30 @@ using System.Threading.Tasks;
 
 namespace DBFirst.Repository
 {
-    public class Like : ILike
+    public class Comment : IComment
     {
         public readonly ReadDbContext _contextR;
         public readonly WriteDbContext _contextW;
-        public Like(ReadDbContext contextR, WriteDbContext contextW)
+        public Comment(ReadDbContext contextR, WriteDbContext contextW)
         {
             _contextR = contextR;
             _contextW = contextW;
         }
-        public async Task<MessageHelper> CreateLike(CreateLikeDTO objCreate)
+
+        public async Task<MessageHelper> CreateComment(CreateCommentDTO objCreate)
         {
-            var likeObj = new Models.Write.TblLike
+            var commObj = new Models.Write.TblComment
             {
 
                 IntUserId = objCreate.UserId,
                 IntPostId = objCreate.PostId
             };
 
-            await _contextW.TblLike.AddAsync(likeObj);
+            await _contextW.TblComment.AddAsync(commObj);
             await _contextW.SaveChangesAsync();
 
             var msg = new MessageHelper();
-            msg.Message = "Liked Post Successfully";
+            msg.Message = "Commented in a  Post Successfully";
             msg.statuscode = 200;
 
             return msg;

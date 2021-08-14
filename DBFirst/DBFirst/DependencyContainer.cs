@@ -16,6 +16,7 @@ namespace DBFirst
             services.AddTransient<IUser, User>();
             services.AddTransient<IPost, Post>();
             services.AddTransient<ILike, Like>();
+            services.AddTransient<IComment, Comment>();
 
         }
     }
