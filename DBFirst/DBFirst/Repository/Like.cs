@@ -24,7 +24,8 @@ namespace DBFirst.Repository
             {
 
                 IntLikeId = objCreate.LikeId,
-                IntUserId = objCreate.UserId
+                IntUserId = objCreate.UserId,
+                IntPostId = objCreate.PostId
             };
 
             await _contextW.TblLike.AddAsync(likeObj);

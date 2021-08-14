@@ -57,7 +57,13 @@ namespace DBFirst.DbContexts
                     .WithMany(p => p.TblComment)
                     .HasForeignKey(d => d.IntPostId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_tblComment_tblPost");
+                    .HasConstraintName("FK_tblComment_tblPost1");
+
+                entity.HasOne(d => d.IntUser)
+                    .WithMany(p => p.TblComment)
+                    .HasForeignKey(d => d.IntUserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_tblComment_tblUser");
             });
 
             modelBuilder.Entity<TblLike>(entity =>
@@ -68,7 +74,15 @@ namespace DBFirst.DbContexts
 
                 entity.Property(e => e.IntLikeId).HasColumnName("intLikeId");
 
+                entity.Property(e => e.IntPostId).HasColumnName("intPostId");
+
                 entity.Property(e => e.IntUserId).HasColumnName("intUserId");
+
+                entity.HasOne(d => d.IntPost)
+                    .WithMany(p => p.TblLike)
+                    .HasForeignKey(d => d.IntPostId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_tblLike_tblPost");
 
                 entity.HasOne(d => d.IntUser)
                     .WithMany(p => p.TblLike)
@@ -91,6 +105,12 @@ namespace DBFirst.DbContexts
                     .IsRequired()
                     .HasMaxLength(500)
                     .HasColumnName("strPostDescription");
+
+                entity.HasOne(d => d.IntUser)
+                    .WithMany(p => p.TblPost)
+                    .HasForeignKey(d => d.IntUserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_tblPost_tblUser");
             });
 
             modelBuilder.Entity<TblUser>(entity =>
