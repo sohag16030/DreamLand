@@ -21,7 +21,7 @@ namespace DBFirst.Controllers
         }
 
         [HttpPost]
-        [Route("CreateOrEditLike")]
+        [Route("CreateOrEditComment")]
         [SwaggerOperation(Description = "Example { }")]
         public async Task<MessageHelper> CreateOrEditComment(CreateCommentDTO create)
         {
