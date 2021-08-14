@@ -85,3 +85,4 @@ C:\DreamLand\DBFirst\DBFirst\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.
 C:\DreamLand\DBFirst\DBFirst\bin\Debug\netcoreapp3.1\System.Web.Http.dll
 C:\DreamLand\DBFirst\DBFirst\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\DreamLand\DBFirst\DBFirst\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
+C:\DreamLand\DBFirst\DBFirst\obj\Debug\netcoreapp3.1\DBFirst.csproj.AssemblyReference.cache

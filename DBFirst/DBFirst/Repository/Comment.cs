@@ -23,7 +23,7 @@ namespace DBFirst.Repository
         {
             var commObj = new Models.Write.TblComment
             {
-
+                StrCommentDescription = objCreate.CommentDescription,
                 IntUserId = objCreate.UserId,
                 IntPostId = objCreate.PostId
             };
