@@ -36,5 +36,24 @@ namespace DBFirst.Controllers
                 throw ex;
             }
         }
+        [HttpGet]
+        [Route("PostDetailsLandingPasignation")]
+        [SwaggerOperation(Description = "Example { }")]
+        public async Task<IActionResult> PostDetailsLandingPasignation(string search, long PageNo, long PageSize, string viewOrder)
+        {
+            try
+            {
+                var dt = await _IRepository.PostDetailLandingPasignation(search, PageNo, PageSize, viewOrder);
+                if (dt == null)
+                {
+                    return NotFound();
+                }
+                return Ok(dt);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -10,5 +10,7 @@ namespace DBFirst.IRepository
     public interface IUser
     {
         public Task<MessageHelper> CreateUser(CreateUserDTO objCreate);
+        public Task<PostDetailLandingPagination> PostDetailLandingPasignation(string search, long PageNo, long PageSize, string viewOrder);
+
     }
 }
