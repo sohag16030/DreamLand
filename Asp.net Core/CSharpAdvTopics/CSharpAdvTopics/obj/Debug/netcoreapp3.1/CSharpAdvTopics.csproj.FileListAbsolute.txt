@@ -1,0 +1,13 @@
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.exe
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.deps.json
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.runtimeconfig.json
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.runtimeconfig.dev.json
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.dll
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.pdb
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.csproj.AssemblyReference.cache
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.AssemblyInfoInputs.cache
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.AssemblyInfo.cs
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.csproj.CoreCompileInputs.cache
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.dll
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.pdb
+I:\DreamLand\Asp.net Core\CSharpAdvTopics\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.genruntimeconfig.cache
