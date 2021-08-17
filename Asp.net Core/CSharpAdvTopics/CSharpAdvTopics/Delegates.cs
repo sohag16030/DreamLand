@@ -6,9 +6,11 @@ namespace CSharpAdvTopics
 {
     public class Delegates
     {
-        //static void Main(string[] args)
-        //{
-        //    Console.WriteLine("Hello!");
-        //}
+        static void Main(string[] args)
+        {
+            var obj = new Testing();
+            obj.Start();
+        }
+        
     }
 }
