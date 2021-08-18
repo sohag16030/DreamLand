@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\CSharpAdvTopics.csproj": {}
+    "I:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\CSharpAdvTopics.csproj": {}
   },
   "projects": {
-    "C:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\CSharpAdvTopics.csproj": {
+    "I:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\CSharpAdvTopics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\CSharpAdvTopics.csproj",
+        "projectUniqueName": "I:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\CSharpAdvTopics.csproj",
         "projectName": "CSharpAdvTopics",
-        "projectPath": "C:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\CSharpAdvTopics.csproj",
-        "packagesPath": "C:\\Users\\shoha\\.nuget\\packages\\",
-        "outputPath": "C:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\obj\\",
+        "projectPath": "I:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\CSharpAdvTopics.csproj",
+        "packagesPath": "C:\\Users\\Sohag\\.nuget\\packages\\",
+        "outputPath": "I:\\DreamLand\\Asp.net Core\\CSharpAdvTopics\\CSharpAdvTopics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shoha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sohag\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
