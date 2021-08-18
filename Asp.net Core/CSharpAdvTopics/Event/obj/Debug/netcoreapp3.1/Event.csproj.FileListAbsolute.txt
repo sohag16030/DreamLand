@@ -1,0 +1,13 @@
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\bin\Debug\netcoreapp3.1\Event.exe
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\bin\Debug\netcoreapp3.1\Event.deps.json
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\bin\Debug\netcoreapp3.1\Event.runtimeconfig.json
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\bin\Debug\netcoreapp3.1\Event.runtimeconfig.dev.json
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\bin\Debug\netcoreapp3.1\Event.dll
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\bin\Debug\netcoreapp3.1\Event.pdb
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\obj\Debug\netcoreapp3.1\Event.csproj.AssemblyReference.cache
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\obj\Debug\netcoreapp3.1\Event.AssemblyInfoInputs.cache
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\obj\Debug\netcoreapp3.1\Event.AssemblyInfo.cs
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\obj\Debug\netcoreapp3.1\Event.csproj.CoreCompileInputs.cache
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\obj\Debug\netcoreapp3.1\Event.dll
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\obj\Debug\netcoreapp3.1\Event.pdb
+C:\DreamLand\Asp.net Core\CSharpAdvTopics\Event\obj\Debug\netcoreapp3.1\Event.genruntimeconfig.cache
