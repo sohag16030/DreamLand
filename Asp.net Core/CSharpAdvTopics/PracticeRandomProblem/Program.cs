@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace PracticeRandom
+namespace PracticeRandomProblem
 {
-    class BinarySearch
+    class Program
     {
         static void Main(string[] args)
         {

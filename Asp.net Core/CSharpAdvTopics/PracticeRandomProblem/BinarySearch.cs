@@ -2,7 +2,7 @@
 //using System.Collections.Generic;
 //using System.Text;
 
-//namespace CSharpAdvTopics
+//namespace PracticeRandomProblem
 //{
 //    public class BinarySearch
 //    {
