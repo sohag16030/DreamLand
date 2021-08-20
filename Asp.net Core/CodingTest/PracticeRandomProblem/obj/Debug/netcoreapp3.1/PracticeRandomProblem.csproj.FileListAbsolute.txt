@@ -11,3 +11,16 @@ C:\DreamLand\Asp.net Core\CSharpAdvTopics\PracticeRandomProblem\obj\Debug\netcor
 C:\DreamLand\Asp.net Core\CSharpAdvTopics\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.dll
 C:\DreamLand\Asp.net Core\CSharpAdvTopics\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.pdb
 C:\DreamLand\Asp.net Core\CSharpAdvTopics\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.genruntimeconfig.cache
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\bin\Debug\netcoreapp3.1\PracticeRandomProblem.exe
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\bin\Debug\netcoreapp3.1\PracticeRandomProblem.deps.json
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\bin\Debug\netcoreapp3.1\PracticeRandomProblem.runtimeconfig.json
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\bin\Debug\netcoreapp3.1\PracticeRandomProblem.runtimeconfig.dev.json
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\bin\Debug\netcoreapp3.1\PracticeRandomProblem.dll
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\bin\Debug\netcoreapp3.1\PracticeRandomProblem.pdb
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.csproj.AssemblyReference.cache
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.AssemblyInfoInputs.cache
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.AssemblyInfo.cs
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.csproj.CoreCompileInputs.cache
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.dll
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.pdb
+I:\DreamLand\Asp.net Core\CodingTest\PracticeRandomProblem\obj\Debug\netcoreapp3.1\PracticeRandomProblem.genruntimeconfig.cache
