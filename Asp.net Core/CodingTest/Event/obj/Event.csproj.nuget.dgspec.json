@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "I:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\Event.csproj": {}
+    "C:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\Event.csproj": {}
   },
   "projects": {
-    "I:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\Event.csproj": {
+    "C:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\Event.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\Event.csproj",
+        "projectUniqueName": "C:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\Event.csproj",
         "projectName": "Event",
-        "projectPath": "I:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\Event.csproj",
-        "packagesPath": "C:\\Users\\Sohag\\.nuget\\packages\\",
-        "outputPath": "I:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\obj\\",
+        "projectPath": "C:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\Event.csproj",
+        "packagesPath": "C:\\Users\\shoha\\.nuget\\packages\\",
+        "outputPath": "C:\\DreamLand\\Asp.net Core\\CodingTest\\Event\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sohag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shoha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
