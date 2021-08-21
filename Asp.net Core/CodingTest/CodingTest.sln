@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeRandomProblem", "Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Event", "Event\Event.csproj", "{88A2F308-4ECB-4CB9-9C6A-181827316F55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursionPratice", "RecursionPratice\RecursionPratice.csproj", "{E5A210C3-32EB-4D52-9364-E06702089BFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursionPratice", "RecursionPratice\RecursionPratice.csproj", "{E5A210C3-32EB-4D52-9364-E06702089BFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_OOD", "OOP_OOD\OOP_OOD.csproj", "{6FE48D62-1BA0-4468-9421-3B5B10365B4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E5A210C3-32EB-4D52-9364-E06702089BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5A210C3-32EB-4D52-9364-E06702089BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5A210C3-32EB-4D52-9364-E06702089BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE48D62-1BA0-4468-9421-3B5B10365B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE48D62-1BA0-4468-9421-3B5B10365B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE48D62-1BA0-4468-9421-3B5B10365B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE48D62-1BA0-4468-9421-3B5B10365B4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

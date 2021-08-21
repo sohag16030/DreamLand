@@ -1,0 +1,12 @@
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\bin\Debug\netcoreapp3.1\OOP_OOD.exe
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\bin\Debug\netcoreapp3.1\OOP_OOD.deps.json
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\bin\Debug\netcoreapp3.1\OOP_OOD.runtimeconfig.json
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\bin\Debug\netcoreapp3.1\OOP_OOD.runtimeconfig.dev.json
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\bin\Debug\netcoreapp3.1\OOP_OOD.dll
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\bin\Debug\netcoreapp3.1\OOP_OOD.pdb
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.AssemblyInfoInputs.cache
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.AssemblyInfo.cs
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.csproj.CoreCompileInputs.cache
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.dll
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.pdb
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.genruntimeconfig.cache
