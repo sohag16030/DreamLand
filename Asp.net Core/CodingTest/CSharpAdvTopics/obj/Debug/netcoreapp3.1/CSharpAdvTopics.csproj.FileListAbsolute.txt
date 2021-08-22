@@ -37,3 +37,16 @@ I:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSh
 I:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.dll
 I:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.pdb
 I:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.genruntimeconfig.cache
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.exe
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.deps.json
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.runtimeconfig.json
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.runtimeconfig.dev.json
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.dll
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\bin\Debug\netcoreapp3.1\CSharpAdvTopics.pdb
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.csproj.AssemblyReference.cache
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.AssemblyInfoInputs.cache
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.AssemblyInfo.cs
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.csproj.CoreCompileInputs.cache
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.dll
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.pdb
+C:\DreamLand\Asp.net Core\CodingTest\CSharpAdvTopics\obj\Debug\netcoreapp3.1\CSharpAdvTopics.genruntimeconfig.cache
