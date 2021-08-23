@@ -4,7 +4,7 @@
 
 //namespace RecursionPratice
 //{
-//    class BinarySearchUsingRecursion
+//    class BinarySearch
 //    {
 //        public static void Main()
 //        {

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\PracticeRandomProblem.csproj": {}
+    "I:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\PracticeRandomProblem.csproj": {}
   },
   "projects": {
-    "C:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\PracticeRandomProblem.csproj": {
+    "I:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\PracticeRandomProblem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\PracticeRandomProblem.csproj",
+        "projectUniqueName": "I:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\PracticeRandomProblem.csproj",
         "projectName": "PracticeRandomProblem",
-        "projectPath": "C:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\PracticeRandomProblem.csproj",
-        "packagesPath": "C:\\Users\\shoha\\.nuget\\packages\\",
-        "outputPath": "C:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\obj\\",
+        "projectPath": "I:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\PracticeRandomProblem.csproj",
+        "packagesPath": "C:\\Users\\Sohag\\.nuget\\packages\\",
+        "outputPath": "I:\\DreamLand\\Asp.net Core\\CodingTest\\PracticeRandomProblem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shoha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sohag\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
