@@ -10,5 +10,6 @@ namespace DBFirst.IRepository
     public interface IComment
     {
         public Task<MessageHelper> CreateComment(CreateCommentDTO objCreate);
+        public Task<GetWeatherInfoDTO> GetWeatherInfoDTO(string cityName);
     }
 }

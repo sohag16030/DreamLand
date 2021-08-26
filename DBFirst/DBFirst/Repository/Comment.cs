@@ -5,6 +5,8 @@ using DBFirst.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Security.Policy;
 using System.Threading.Tasks;
 
 namespace DBFirst.Repository
@@ -36,6 +38,18 @@ namespace DBFirst.Repository
             msg.statuscode = 200;
 
             return msg;
+        }
+
+        public async Task<GetWeatherInfoDTO> GetWeatherInfoDTO(string cityName)
+        {
+            using (var client = new HttpClient())
+            {
+                var url = new Url($"http://api.openweathermap.org/data/2.5/weather?q=Dhaka&appid=e035ca5c00b6f72b3e2447c49dd92c57");
+                var response = await client.GetAsync(url);
+
+            }
+            var obj = new GetWeatherInfoDTO();
+            //return obj;
         }
     }
 }

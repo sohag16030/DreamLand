@@ -19,6 +19,21 @@ namespace DBFirst.Controllers
         {
             _IRepository = IRepository;
         }
+        [HttpGet]
+        [Route("Weather")]
+        [SwaggerOperation(Description = "Example { }")]
+        public async Task<MessageHelper> Weather(string City)
+        {
+            try
+            {
+                //var msg = "hello";
+                return new MessageHelper();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         [HttpPost]
         [Route("CreateOrEditComment")]
