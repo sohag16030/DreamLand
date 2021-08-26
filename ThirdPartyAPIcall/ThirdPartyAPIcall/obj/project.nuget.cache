@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rep6l/7aQK2yM6dpr4fu5bw66OyxWbzI4co7arHmOfzg9uezMSMWG4JvtL69Ohbqv37o3cTLqAoxc8lzguZaTQ==",
+  "success": true,
+  "projectFilePath": "C:\\DreamLand\\ThirdPartyAPIcall\\ThirdPartyAPIcall\\ThirdPartyAPIcall.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shoha\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
