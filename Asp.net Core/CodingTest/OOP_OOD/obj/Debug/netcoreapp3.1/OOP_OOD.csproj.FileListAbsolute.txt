@@ -10,3 +10,4 @@ C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.csp
 C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.dll
 C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.pdb
 C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.genruntimeconfig.cache
+C:\DreamLand\Asp.net Core\CodingTest\OOP_OOD\obj\Debug\netcoreapp3.1\OOP_OOD.csproj.AssemblyReference.cache
