@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJIT", "BJIT\BJIT.csproj", "{4C10B596-5A97-4236-A21E-B094F969D926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManageMent", "LeaveManageMent\LeaveManageMent.csproj", "{AA79ED7D-E498-4B41-893C-23709D9D383A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApi", "RestApi\RestApi.csproj", "{6B452EB1-B748-4433-B527-F9B71EAEE6BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C10B596-5A97-4236-A21E-B094F969D926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C10B596-5A97-4236-A21E-B094F969D926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C10B596-5A97-4236-A21E-B094F969D926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C10B596-5A97-4236-A21E-B094F969D926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA79ED7D-E498-4B41-893C-23709D9D383A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA79ED7D-E498-4B41-893C-23709D9D383A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA79ED7D-E498-4B41-893C-23709D9D383A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA79ED7D-E498-4B41-893C-23709D9D383A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B452EB1-B748-4433-B527-F9B71EAEE6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B452EB1-B748-4433-B527-F9B71EAEE6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B452EB1-B748-4433-B527-F9B71EAEE6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B452EB1-B748-4433-B527-F9B71EAEE6BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40F037B2-384E-4818-8CD5-F9A7F4C50024}
+	EndGlobalSection
+EndGlobal
