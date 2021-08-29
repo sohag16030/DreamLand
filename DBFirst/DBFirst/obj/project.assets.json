@@ -6121,23 +6121,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shoha\\.nuget\\packages\\": {},
+    "C:\\Users\\Sohag\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DreamLand\\DBFirst\\DBFirst\\DBFirst.csproj",
+      "projectUniqueName": "I:\\DreamLand\\DBFirst\\DBFirst\\DBFirst.csproj",
       "projectName": "DBFirst",
-      "projectPath": "C:\\DreamLand\\DBFirst\\DBFirst\\DBFirst.csproj",
-      "packagesPath": "C:\\Users\\shoha\\.nuget\\packages\\",
-      "outputPath": "C:\\DreamLand\\DBFirst\\DBFirst\\obj\\",
+      "projectPath": "I:\\DreamLand\\DBFirst\\DBFirst\\DBFirst.csproj",
+      "packagesPath": "C:\\Users\\Sohag\\.nuget\\packages\\",
+      "outputPath": "I:\\DreamLand\\DBFirst\\DBFirst\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\shoha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sohag\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
