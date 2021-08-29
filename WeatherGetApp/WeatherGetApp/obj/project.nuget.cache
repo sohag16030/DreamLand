@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5Mo1uoee9OK82CJhsr7Qagf8XHyfBkH5U9sD7lvZ+ZMR2Iienacbb8yP3O0Hd0nVA3Ch9+itT1gQ1IOLpKR9Kw==",
+  "dgSpecHash": "l82+FySNTJnQVWrlVYVqB7sa26fBwY9LSp567cqX8Sn4/9bS8bQIdIybGeAtPICJVe61YXQ5Ln59/IKZa/PR3A==",
   "success": true,
-  "projectFilePath": "C:\\DreamLand\\WeatherGetApp\\WeatherGetApp\\WeatherGetApp.csproj",
+  "projectFilePath": "I:\\DreamLand\\WeatherGetApp\\WeatherGetApp\\WeatherGetApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\shoha\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Sohag\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

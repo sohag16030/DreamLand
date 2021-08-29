@@ -7,7 +7,7 @@ using WeatherGetApp.IRepository;
 
 namespace WeatherGetApp.Controllers
 {
-    [Route("v1/giphy")]
+    [Route("[controller]")]
     public class TestController : Controller
     {
         private readonly ITest _iRepository;
@@ -17,7 +17,7 @@ namespace WeatherGetApp.Controllers
         }
 
         [HttpGet]
-        [Route("random/{searchCritera}")]
+        [Route("{searchCritera}")]
         public IActionResult GetData(string CityName)
         {
             var result = _iRepository.GetWeatherInfo(CityName);
