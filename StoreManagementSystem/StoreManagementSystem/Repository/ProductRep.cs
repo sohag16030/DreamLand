@@ -18,11 +18,11 @@ namespace StoreManagementSystem.Repository
 
         public async Task<MessageHelper> AddProduct(Models.Product objCreate)
         {
-            var count = _context.Products.Where(x => x.ProductName == objCreate.ProductName && x.ProductId != objCreate.ProductId).Count();
+            var count = _context.Products.Where(x => x.ProductName.Trim().ToLower() == objCreate.ProductName.Trim().ToLower() && x.ProductId != objCreate.ProductId).Count();
             if (count > 0)
                 throw new Exception($"{objCreate.ProductName}Product exist");
 
-            var countExUser = _context.Products.Where(x => x.UserName == objCreate.UserName && x.ProductId != objCreate.ProductId).Count();
+            var countExUser = _context.Products.Where(x => x.UserName.Trim().ToLower() == objCreate.UserName.Trim().ToLower() && x.ProductId != objCreate.ProductId).Count();
             if (countExUser == 0)
                 throw new Exception($"{objCreate.UserName}InValid User");
 
@@ -62,11 +62,11 @@ namespace StoreManagementSystem.Repository
 
         public async Task<MessageHelper> EditProduct(Models.Product model)
         {
-            var countExProduct = _context.Products.Where(x => x.ProductName == model.ProductName && x.ProductId != model.ProductId).Count();
+            var countExProduct = _context.Products.Where(x => x.ProductName.Trim().ToLower() == model.ProductName.Trim().ToLower() && x.ProductId != model.ProductId).Count();
             if (countExProduct > 0)
                 throw new Exception($"{model.ProductName}Product exist");
 
-            var countExUser = _context.Products.Where(x => x.UserName == model.UserName).Count();
+            var countExUser = _context.Products.Where(x => x.UserName.Trim().ToLower() == model.UserName.Trim().ToLower()).Count();
             if (countExUser == 0)
                 throw new Exception($"{model.UserName}InValid User");
 
