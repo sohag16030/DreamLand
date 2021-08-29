@@ -1,41 +1,33 @@
-﻿@model IEnumerable<StoreManagementSystem.Models.TblProduct>
+﻿@model IEnumerable<StoreManagementSystem.Models.Product>
 
+    <p>
+        <a asp-action="AddProduct">AddProduct</a>
+        <a asp-action="Create">Action</a>
+    </p>
 @{
     ViewData["Title"] = "See All Products";
 }
 
-<p>
-    <a asp-action="Create">Create</a>
-    <a asp-action="Create">Action</a>
-</p>
-<p>
-    <a asp-action="Update">Update</a>
-    <a asp-action="Update">Action</a>
-</p>
-<p>
-    <a asp-action="Update">Update</a>
-    <a asp-action="Update">Action</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.StrUserName)
+                @Html.DisplayNameFor(model => model.UserName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StrProductName)
+                @Html.DisplayNameFor(model => model.ProductName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IntProductPrice)
+                @Html.DisplayNameFor(model => model.ProductPrice)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsActive)
+                @Html.DisplayNameFor(model => model.Active)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DteLastActionDateTime)
+                @Html.DisplayNameFor(model => model.LastActionDateTime)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DteServerDateTime)
+                @Html.DisplayNameFor(model => model.ServerDateTime)
             </th>
             <th>
                 @Html.DisplayName("Action")
@@ -47,30 +39,28 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.StrUserName)
+                @Html.DisplayFor(modelItem => item.UserName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StrProductName)
+                @Html.DisplayFor(modelItem => item.ProductName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IntProductPrice)
+                @Html.DisplayFor(modelItem => item.ProductPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsActive)
+                @Html.DisplayFor(modelItem => item.Active)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DteLastActionDateTime)
+                @Html.DisplayFor(modelItem => item.LastActionDateTime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DteServerDateTime)
+                @Html.DisplayFor(modelItem => item.ServerDateTime)
             </td>
+   
             <td>
-                @Html.DisplayFor(modelItem => item.IntUser.StrUserName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IntProductId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IntProductId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IntProductId">Delete</a>
+                <a asp-action="EditProduct" asp-route-id="@item.ProductId">Edit</a> |
+                <a asp-action="DetailsProduct" asp-route-id="@item.ProductId">Details</a> |
+                <a asp-action="DeleteProduct" asp-route-id="@item.ProductId">Delete</a>
             </td>
         </tr>
 }

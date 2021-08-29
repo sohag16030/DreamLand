@@ -18,8 +18,8 @@ namespace StoreManagementSystem.DbContexts
         {
         }
 
-        public virtual DbSet<TblProduct> TblProduct { get; set; }
-        public virtual DbSet<TblUser> TblUser { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,23 +34,14 @@ namespace StoreManagementSystem.DbContexts
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
-            modelBuilder.Entity<TblProduct>(entity =>
+            modelBuilder.Entity<Product>(entity =>
             {
-                entity.Property(e => e.DteServerDateTime).HasDefaultValueSql("(getdate())");
-
-                entity.HasOne(d => d.IntUser)
-                    .WithMany(p => p.TblProduct)
-                    .HasForeignKey(d => d.IntUserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_tblProduct_tblUser");
+                entity.Property(e => e.ServerDateTime).HasDefaultValueSql("(getdate())");
             });
 
-            modelBuilder.Entity<TblUser>(entity =>
+            modelBuilder.Entity<User>(entity =>
             {
-                entity.HasKey(e => e.IntUserId)
-                    .HasName("PK_tblUser_1");
-
-                entity.Property(e => e.DteServerDateTime).HasDefaultValueSql("(getdate())");
+                entity.Property(e => e.ServerDateTime).HasDefaultValueSql("(getdate())");
             });
 
             OnModelCreatingPartial(modelBuilder);

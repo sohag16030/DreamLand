@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StoreManagementSystem.DbContexts;
+using StoreManagementSystem.IRepository;
+using StoreManagementSystem.Models;
+using StoreManagementSystem.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +29,8 @@ namespace StoreManagementSystem
         {
             services.AddControllersWithViews();
             services.AddDbContext<MyDbContext>();
+            services.AddTransient<IProduct, ProductRep>();
+            //services.AddTransient<IUser, UserRep>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
