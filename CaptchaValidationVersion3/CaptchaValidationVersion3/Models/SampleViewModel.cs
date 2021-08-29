@@ -7,4 +7,5 @@ namespace CaptchaValidationVersion3.Models
         public string Text { get; set; }
         public string Captcha { get; set; }
     }
+
 }
