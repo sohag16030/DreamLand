@@ -18,7 +18,7 @@ namespace StoreManagementSystem.Controllers
             _context = context;
             _IRepository = IRepository;
         }
-   
+        [HttpGet]
         public IActionResult AddProduct()
         {
             var model = new Product();
@@ -44,6 +44,7 @@ namespace StoreManagementSystem.Controllers
             }
             return RedirectToAction("Index");
         }
+        [HttpGet]
         public async Task<IActionResult> EditProduct(int id)
         {
             var model = new Product();
@@ -68,18 +69,20 @@ namespace StoreManagementSystem.Controllers
             }
             return RedirectToAction("Index");
         }
+        [HttpGet]
         public async Task<IActionResult> DetailsProduct(int id)
         {
             var model = new Product();
             model = await _IRepository.LoadProduct(id);
             return View(model);
         }
-
+        [HttpPut]
         public async Task<IActionResult> DeleteStudent(int id)
         {
             await _IRepository.DeActivateProduct(id);
             return RedirectToAction("Index");
         }
+        [HttpGet]
         public IActionResult Index()
         {
             List<Product> products = _context.Products.Where(x=>x.Active == true).ToList();
