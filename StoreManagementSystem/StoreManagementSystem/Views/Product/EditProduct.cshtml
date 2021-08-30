@@ -5,10 +5,9 @@
 }
 
 <h4>Edit Product</h4>
-<hr />
-<div class="row">
+
     <div class="col-md-4">
-        <form asp-area="Admin" asp-controller="Product" asp-action="EditProduct" method="post" class="form-horizontal">
+        <form asp-area="" asp-controller="Product" asp-action="EditProduct" method="post" class="form-horizontal">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProductId" />
             <div class="form-group">
