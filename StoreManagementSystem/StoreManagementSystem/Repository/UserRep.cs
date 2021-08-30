@@ -18,28 +18,23 @@ namespace StoreManagementSystem.Repository
         }
         public async Task<MessageHelper> AddUser(User objCreate)
         {
-            //var count = _context.Users.Where(x => x.UserName.Trim().ToLower() == objCreate.UserName.Trim().ToLower() && x.ProductId != objCreate.ProductId).Count();
-            //if (count > 0)
-            //    throw new Exception($"{objCreate.ProductName}Product exist");
+            var count = _context.Users.Where(x => x.UserName.Trim().ToLower() == objCreate.UserName.Trim().ToLower() && x.UserId != objCreate.UserId).Count();
+            if (count > 0)
+                throw new Exception($"{objCreate.UserName}User exist");
 
-            //var countExUser = _context.Products.Where(x => x.UserName.Trim().ToLower() == objCreate.UserName.Trim().ToLower() && x.ProductId != objCreate.ProductId).Count();
-            //if (countExUser == 0)
-                throw new Exception($"/*{objCreate.UserName}*/InValid User");
+            var userObj = new Models.User
+            {
+                UserName = objCreate.UserName,
+                UserRole = objCreate.UserRole,
+                Active = true,
+                LastActionDateTime = DateTime.UtcNow
+            };
 
-            //var productObj = new Models.Product
-            //{
-            //    UserName = objCreate.UserName,
-            //    ProductName = objCreate.ProductName,
-            //    ProductPrice = objCreate.ProductPrice,
-            //    Active = true,
-            //    LastActionDateTime = DateTime.UtcNow
-            //};
-
-            //await _context.Products.AddAsync(productObj);
+            await _context.Users.AddAsync(userObj);
             await _context.SaveChangesAsync();
 
             var msg = new MessageHelper();
-            msg.Message = "Product Created Successfully";
+            msg.Message = "User Created Successfully";
             msg.statuscode = 200;
 
             return msg;
