@@ -18,6 +18,12 @@ namespace StoreManagementSystem.Models
         public string UserName { get; set; }
         [Required]
         [StringLength(500)]
+        public string Password { get; set; }
+        [Required]
+        [StringLength(500)]
+        public string ConfirmPassword { get; set; }
+        [Required]
+        [StringLength(500)]
         public string UserRole { get; set; }
         public bool Active { get; set; }
         [Column(TypeName = "datetime")]

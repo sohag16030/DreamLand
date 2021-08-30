@@ -21,6 +21,10 @@ namespace StoreManagementSystem.Repository
             var count = _context.Users.Where(x => x.UserName.Trim().ToLower() == objCreate.UserName.Trim().ToLower() && x.UserId != objCreate.UserId).Count();
             if (count > 0)
                 throw new Exception($"{objCreate.UserName}User exist");
+            if(objCreate.Password != objCreate.ConfirmPassword)
+            {
+                throw new Exception("Password and Confirm Password Doesn't match");
+            }
 
             var userObj = new Models.User
             {
