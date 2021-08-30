@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace StoreManagementSystem.Controllers
 {
+    [Controller]
     public class RegisterLoginController : Controller
     {
         private readonly MyDbContext _context;
@@ -36,7 +37,7 @@ namespace StoreManagementSystem.Controllers
                 {
                     await _IRepository.AddUser(model);
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("~/Home/Index");
                 }
 
                 catch (Exception ex)
