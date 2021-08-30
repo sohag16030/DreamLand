@@ -46,44 +46,44 @@ namespace StoreManagementSystem.Controllers
             }
             return RedirectToAction("Index");
         }
-        //[HttpGet]
-        //public async Task<IActionResult> EditUser(int id)
-        //{
-        //    var model = new User();
-        //    model = await _IRepository.LoadUser(id);
-        //    return View(model);
-        //}
+        [HttpGet]
+        public async Task<IActionResult> EditUser(int id)
+        {
+            var model = new User();
+            model = await _IRepository.LoadUser(id);
+            return View(model);
+        }
 
-        //[HttpPost]
-        //public IActionResult EditUser(User model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            _IRepository.EditUser(model);
-        //            return RedirectToAction("Index");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            throw ex;
-        //        }
-        //    }
-        //    return RedirectToAction("Index");
-        //}
-        //[HttpGet]
-        //public async Task<IActionResult> DetailsUser(int id)
-        //{
-        //    var model = new User();
-        //    model = await _IRepository.LoadUser(id);
-        //    return View(model);
-        //}
-        //[HttpPut]
-        //public async Task<IActionResult> DeleteStudent(int id)
-        //{
-        //    await _IRepository.DeActivateUser(id);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        public IActionResult EditUser(User model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _IRepository.EditUser(model);
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public async Task<IActionResult> DetailsUser(int id)
+        {
+            var model = new User();
+            model = await _IRepository.LoadUser(id);
+            return View(model);
+        }
+        [HttpPut]
+        public async Task<IActionResult> DeleteStudent(int id)
+        {
+            await _IRepository.DeActivateUser(id);
+            return RedirectToAction("Index");
+        }
         [HttpGet]
         public IActionResult Index()
         {

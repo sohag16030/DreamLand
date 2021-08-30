@@ -40,19 +40,45 @@ namespace StoreManagementSystem.Repository
             return msg;
         }
 
-        public Task<MessageHelper> DeActivateUser(int id)
+        public async Task<MessageHelper> DeActivateUser(int id)
         {
-            throw new NotImplementedException();
+            var exitUser = await Task.FromResult((from a in _context.Users where a.UserId == id select a).FirstOrDefault());
+
+            exitUser.Active = false;
+
+            _context.Users.Update(exitUser);
+            _context.SaveChanges();
+
+            var msg = new MessageHelper();
+            msg.Message = "Deleted successfully";
+            msg.statuscode = 200;
+            return msg;
         }
 
-        public Task<MessageHelper> EditUser(User model)
+        public async Task<MessageHelper> EditUser(User model)
         {
-            throw new NotImplementedException();
+            var countExUser = _context.Users.Where(x => x.UserName.Trim().ToLower() == model.UserName.Trim().ToLower() && x.UserId != model.UserId).Count();
+            if (countExUser > 0)
+                throw new Exception($"{model.UserName}User exist");
+
+
+            var exitUser = await Task.FromResult((from a in _context.Users where a.UserId == model.UserId select a).FirstOrDefault());
+            exitUser.UserName = model.UserName;
+
+
+            _context.Users.Update(exitUser);
+            _context.SaveChanges();
+
+            var msg = new MessageHelper();
+            msg.Message = "updated successfully";
+            msg.statuscode = 200;
+            return msg;
         }
 
-        public Task<User> LoadUser(int id)
+        public async Task<User> LoadUser(int id)
         {
-            throw new NotImplementedException();
+            var product = await Task.FromResult((from a in _context.Users where id == a.UserId && a.Active == true select a).FirstOrDefault());
+            return product;
         }
     }
 }
