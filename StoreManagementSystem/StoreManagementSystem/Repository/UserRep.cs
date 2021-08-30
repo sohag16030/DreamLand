@@ -30,6 +30,8 @@ namespace StoreManagementSystem.Repository
             {
                 UserName = objCreate.UserName,
                 UserRole = objCreate.UserRole,
+                Password = objCreate.Password,
+                ConfirmPassword = objCreate.ConfirmPassword,
                 Active = true,
                 LastActionDateTime = DateTime.UtcNow
             };
