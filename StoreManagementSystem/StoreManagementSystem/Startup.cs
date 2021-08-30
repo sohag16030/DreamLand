@@ -30,7 +30,7 @@ namespace StoreManagementSystem
             services.AddControllersWithViews();
             services.AddDbContext<MyDbContext>();
             services.AddTransient<IProduct, ProductRep>();
-            //services.AddTransient<IUser, UserRep>();
+            services.AddTransient<IUser, UserRep>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
