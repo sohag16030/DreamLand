@@ -1,68 +1,66 @@
 ﻿@model IEnumerable<StoreManagementSystem.Models.User>
 
-<p>
-    <a asp-action="AddUser">AddUser</a>
-</p>
-<h4>All User List</h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.UserName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ConfirmPassword)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserRole)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Active)
-            </th>
-            <th>
-                @Html.DisplayName("Action")
-            </th>
-            <th>
-                @Html.DisplayName("Permission")
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConfirmPassword)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserRole)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
-            </td>
-            <td>
-                <a asp-action="EditUser" asp-route-id="@item.UserId">EditUser</a> |
-                <a asp-action="DetailsUser" asp-route-id="@item.UserId">DetailsUser</a> |
-                <a asp-action="DeleteUser" asp-route-id="@item.UserId">DeleteUser</a>
+    <p>
+        <a asp-action="AddProductActivity">AddProdctActivity</a> |
+        <a asp-action="EditProductPermission">EditProductActivity</a> |
+        <a asp-action="DetailsProductPermission">DetailsProductActivity</a> |
+        <a asp-action="DeleteProductPermission">DeleteProductActivity</a>
+    </p>
+    <p>
+        <a asp-action="AddUser">AddUser</a>
+    </p>
 
-            </td>
-            <td>
-                <a asp-action="AddProductPermission" asp-route-id="@item.UserId">AddProduct</a> |
-                <a asp-action="EditProductPermission" asp-route-id="@item.UserId">EditProduct</a> |
-                <a asp-action="DetailsProductPermission" asp-route-id="@item.UserId">DetailsProduct</a> |
-                <a asp-action="DeleteProductPermission" asp-route-id="@item.UserId">DeleteProduct</a>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
+    <h4>All User List</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConfirmPassword)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserRole)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Active)
+                </th>
+                <th>
+                    @Html.DisplayName("Action")
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ConfirmPassword)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserRole)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Active)
+                    </td>
+                    <td>
+                        <a asp-action="EditUser" asp-route-id="@item.UserId">EditUser</a> |
+                        <a asp-action="DetailsUser" asp-route-id="@item.UserId">DetailsUser</a> |
+                        <a asp-action="DeleteUser" asp-route-id="@item.UserId">DeleteUser</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
