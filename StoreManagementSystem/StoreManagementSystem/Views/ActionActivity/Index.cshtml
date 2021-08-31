@@ -1,0 +1,40 @@
+﻿@model IEnumerable<StoreManagementSystem.Models.ActionActivity>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ActionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActionStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActionStatus)
+            </td>
+            <td>
+                <a asp-action="Active" asp-route-id="@item.ActionId">Active</a> |
+                <a asp-action="Inactive" asp-route-id="@item.ActionId">Inactive</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -314,3 +314,10 @@ C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1
 C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\User\DetailsUser.cshtml.g.cs
 C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
 C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\RegisterLogin\Login.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\RegisterLogin\Login.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\RegisterLogin\Register.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\User\AddUser.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\User\DetailsUser.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\User\EditUser.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\ActionActivity\Index.cshtml.g.cs
