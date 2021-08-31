@@ -18,6 +18,7 @@ namespace StoreManagementSystem.DbContexts
         {
         }
 
+        public virtual DbSet<ActionActivity> ActionActivities { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<User> Users { get; set; }
 

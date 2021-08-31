@@ -1,4 +1,4 @@
 ﻿
-scaffold-DbContext "Data Source=(local);Database=StoreMDB;Trusted_Connection=True;MultipleActiveResultSets=true;ApplicationIntent=ReadWrite;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Models" -ContextDir "DbContexts" -Context "MyDbContext"  -DataAnnotations  -t dbo.User,dbo.Product  -f
+scaffold-DbContext "Data Source=(local);Database=StoreMDB;Trusted_Connection=True;MultipleActiveResultSets=true;ApplicationIntent=ReadWrite;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Models" -ContextDir "DbContexts" -Context "MyDbContext"  -DataAnnotations  -t dbo.User,dbo.Product,dbo.ActionActivity  -f
 
 

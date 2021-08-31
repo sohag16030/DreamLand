@@ -31,10 +31,6 @@ namespace StoreManagementSystem.Models
         [StringLength(500)]
         public string UserRole { get; set; }
         public bool Active { get; set; }
-        public bool? AddProduct { get; set; }
-        public bool? EditProduct { get; set; }
-        public bool? DeleteProduct { get; set; }
-        public bool? DetailsProduct { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime LastActionDateTime { get; set; }
         [Column(TypeName = "datetime")]
