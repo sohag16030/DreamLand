@@ -57,11 +57,10 @@
 
             </td>
             <td>
-                <a asp-action="Add" asp-route-id="@item.UserId">AddProduct</a> |
-                <a asp-action="Add" asp-route-id="@item.UserId">EditProduct</a> |
-                <a asp-action="Edit" asp-route-id="@item.UserId">DetailsProduct</a> |
-                <a asp-action="Delete" asp-route-id="@item.UserId">DeleteProduct</a>
-
+                <a asp-action="AddProductPermission" asp-route-id="@item.UserId">AddProduct</a> |
+                <a asp-action="EditProductPermission" asp-route-id="@item.UserId">EditProduct</a> |
+                <a asp-action="DetailsProductPermission" asp-route-id="@item.UserId">DetailsProduct</a> |
+                <a asp-action="DeleteProductPermission" asp-route-id="@item.UserId">DeleteProduct</a>
             </td>
         </tr>
         }
