@@ -42,7 +42,7 @@ namespace StoreManagementSystem.Controllers
 
                 catch (Exception ex)
                 {
-                    throw ex;
+                    return Redirect("Register");
                 }
             }
             return RedirectToAction("Login");
@@ -60,8 +60,10 @@ namespace StoreManagementSystem.Controllers
             try
             {
                 await _IRepository.Login(model);
-
-                return Redirect("/User/Index");
+                if(model.UserRole == "Admin" || model.UserRole == "admin")
+                  return Redirect("/User/Index");
+                else
+                    return Redirect("/Product/Index");
             }
 
             catch (Exception ex)
