@@ -41,7 +41,7 @@ namespace StoreManagementSystem.Controllers
 
                 catch (Exception ex)
                 {
-                    throw ex;
+                    return Redirect("/User/AddUser");
                 }
             }
             return RedirectToAction("Index");
@@ -66,7 +66,7 @@ namespace StoreManagementSystem.Controllers
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    return Redirect("/User/EditUser");
                 }
             }
             return RedirectToAction("Index");

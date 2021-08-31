@@ -39,7 +39,7 @@ namespace StoreManagementSystem.Controllers
 
                 catch (Exception ex)
                 {
-                    throw ex;
+                    return Redirect("/Product/AddProduct");
                 }
             }
             return RedirectToAction("Index");
@@ -64,7 +64,7 @@ namespace StoreManagementSystem.Controllers
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    return Redirect("/Product/EditProduct");
                 }
             }
             return RedirectToAction("Index");
