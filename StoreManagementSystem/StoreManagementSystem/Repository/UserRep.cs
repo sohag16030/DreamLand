@@ -40,8 +40,9 @@ namespace StoreManagementSystem.Repository
 
             var userObj = new Models.User
             {
+                UserId = (from x in _context.Users where x.UserName.Trim().ToLower() == objCreate.UserName.Trim() && x.Active == true select x.UserId).FirstOrDefault(),
                 UserName = objCreate.UserName,
-                UserRole = objCreate.UserRole,
+                UserRole = objCreate.UserRole =="Admin" || objCreate.UserRole == "admin" ? "Admin" : "User",
                 Password = objCreate.Password,
                 ConfirmPassword = objCreate.ConfirmPassword,
                 Active = true,

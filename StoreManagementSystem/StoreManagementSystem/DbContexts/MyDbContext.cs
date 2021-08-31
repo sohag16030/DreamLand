@@ -37,6 +37,12 @@ namespace StoreManagementSystem.DbContexts
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.Property(e => e.ServerDateTime).HasDefaultValueSql("(getdate())");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Products)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Product_User");
             });
 
             modelBuilder.Entity<User>(entity =>

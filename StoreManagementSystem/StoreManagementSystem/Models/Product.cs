@@ -13,6 +13,7 @@ namespace StoreManagementSystem.Models
     {
         [Key]
         public long ProductId { get; set; }
+        public long UserId { get; set; }
         [Required]
         [StringLength(50)]
         public string UserName { get; set; }
@@ -26,5 +27,9 @@ namespace StoreManagementSystem.Models
         public DateTime LastActionDateTime { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime ServerDateTime { get; set; }
+
+        [ForeignKey(nameof(UserId))]
+        [InverseProperty("Products")]
+        public virtual User User { get; set; }
     }
 }
