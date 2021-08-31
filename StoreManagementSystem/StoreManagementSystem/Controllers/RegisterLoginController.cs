@@ -37,7 +37,7 @@ namespace StoreManagementSystem.Controllers
                 {
                     await _IRepository.AddUser(model);
 
-                    return RedirectToAction("~/Home/Index");
+                    return Redirect("/User/Index");
                 }
 
                 catch (Exception ex)
