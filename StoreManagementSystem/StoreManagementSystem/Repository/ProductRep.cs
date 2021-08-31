@@ -22,12 +22,13 @@ namespace StoreManagementSystem.Repository
             if (count > 0)
                 throw new Exception($"{objCreate.ProductName}Product exist");
 
-            var countExUser = _context.Products.Where(x => x.UserName.Trim().ToLower() == objCreate.UserName.Trim().ToLower() && x.ProductId != objCreate.ProductId).Count();
+            var countExUser = _context.Users.Where(x => x.UserName.Trim().ToLower() == objCreate.UserName.Trim().ToLower()).Count();
             if (countExUser == 0)
                 throw new Exception($"{objCreate.UserName}InValid User");
 
             var productObj = new Models.Product
             {
+                UserId = (from x in _context.Users where x.UserName.Trim().ToLower() == objCreate.UserName.Trim() && x.Active == true select x.UserId).FirstOrDefault(),
                 UserName = objCreate.UserName,
                 ProductName = objCreate.ProductName,
                 ProductPrice = objCreate.ProductPrice,

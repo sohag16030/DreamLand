@@ -18,6 +18,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.ActionStatus)
             </th>
+            <th>
+                @Html.DisplayName("Action")
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -32,7 +35,7 @@
             </td>
             <td>
                 <a asp-action="Active" asp-route-id="@item.ActionId">Active</a> |
-                <a asp-action="Inactive" asp-route-id="@item.ActionId">Inactive</a> |
+                <a asp-action="Inactive" asp-route-id="@item.ActionId">Inactive</a>
             </td>
         </tr>
 }
