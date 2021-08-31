@@ -54,7 +54,7 @@ namespace StoreManagementSystem.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        [HttpPut]
         public IActionResult EditUser(User model)
         {
             if (ModelState.IsValid)
@@ -78,7 +78,7 @@ namespace StoreManagementSystem.Controllers
             model = await _IRepository.LoadUser(id);
             return View(model);
         }
-        [HttpPut]
+        [HttpDelete]
         public async Task<IActionResult> DeleteUser(int id)
         {
             await _IRepository.DeActivateUser(id);

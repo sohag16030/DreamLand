@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using StoreManagementSystem.DbContexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace StoreManagementSystem.Controllers
 {
-    public class PermissionController : Controller
+    public class ActionActivityController : Controller
     {
-        public IActionResult Index()
+        private readonly MyDbContext _context;
+        
+        [HttpGet]
+        public IActionResult AddProductActivity(int val)
         {
+            
             return View();
         }
     }

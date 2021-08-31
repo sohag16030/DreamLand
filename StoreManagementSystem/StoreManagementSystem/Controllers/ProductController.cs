@@ -52,7 +52,7 @@ namespace StoreManagementSystem.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        [HttpPut]
         public IActionResult EditProduct(Product model)
         {
             if (ModelState.IsValid)
@@ -76,7 +76,7 @@ namespace StoreManagementSystem.Controllers
             model = await _IRepository.LoadProduct(id);
             return View(model);
         }
-        [HttpPut]
+        [HttpDelete]
         public async Task<IActionResult> DeleteStudent(int id)
         {
             await _IRepository.DeActivateProduct(id);
