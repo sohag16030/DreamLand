@@ -12,7 +12,7 @@ namespace StoreManagementSystem.Controllers
         private readonly MyDbContext _context;
         
         [HttpGet]
-        public IActionResult AddProductActivity(int val)
+        public IActionResult AddProductActivity(string val)
         {
             
             return View();
