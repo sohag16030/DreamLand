@@ -23,10 +23,7 @@
                 @Html.DisplayNameFor(model => model.Active)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LastActionDateTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ServerDateTime)
+                @Html.DisplayName("Action")
             </th>
             <th>
                 @Html.DisplayName("Permission")
@@ -37,35 +34,36 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Password)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ConfirmPassword)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserRole)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Active)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastActionDateTime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ServerDateTime)
-                </td>
-                <td>
-                    <a asp-action="EditUser" asp-route-id="@item.UserId">Edit</a> |
-                    <a asp-action="DetailsUser" asp-route-id="@item.UserId">Details</a> |
-                    <a asp-action="DeleteUser" asp-route-id="@item.UserId">Delete</a>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfirmPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserRole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                <a asp-action="EditUser" asp-route-id="@item.UserId">EditUser</a> |
+                <a asp-action="DetailsUser" asp-route-id="@item.UserId">DetailsUser</a> |
+                <a asp-action="DeleteUser" asp-route-id="@item.UserId">DeleteUser</a>
 
-                </td>
-            </tr>
+            </td>
+            <td>
+                <a asp-action="Add" asp-route-id="@item.UserId">AddProduct</a> |
+                <a asp-action="Add" asp-route-id="@item.UserId">EditProduct</a> |
+                <a asp-action="Edit" asp-route-id="@item.UserId">DetailsProduct</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserId">DeleteProduct</a>
+
+            </td>
+        </tr>
         }
     </tbody>
 </table>
