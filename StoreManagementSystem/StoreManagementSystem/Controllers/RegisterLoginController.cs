@@ -72,5 +72,19 @@ namespace StoreManagementSystem.Controllers
             }
 
         }
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            try
+            {
+               return Redirect("Login");
+            }
+
+            catch (Exception ex)
+            {
+                return Redirect("/RegisterLogin/Register");
+            }
+
+        }
     }
 }

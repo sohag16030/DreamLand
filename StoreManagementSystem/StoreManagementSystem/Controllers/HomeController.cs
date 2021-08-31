@@ -27,7 +27,18 @@ namespace StoreManagementSystem.Controllers
         {
             return View();
         }
-
+        public IActionResult Customexception()
+        {
+            return View();
+        }
+        public IActionResult CustomexceptionforUser()
+        {
+            return View();
+        }
+        public IActionResult Exception()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

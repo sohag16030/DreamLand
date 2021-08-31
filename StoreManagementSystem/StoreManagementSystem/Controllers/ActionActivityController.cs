@@ -23,7 +23,7 @@ namespace StoreManagementSystem.Controllers
             {
                 try
                 {
-                    var status = (from x in _context.ActionActivities where x.ActionId == id select x).FirstOrDefault();
+                    var status = (from x in _context.ActionActivities where x.AutoId == id select x).FirstOrDefault();
                     status.ActionStatus = true;
                     _context.Update(status);
                     await _context.SaveChangesAsync();
@@ -43,7 +43,7 @@ namespace StoreManagementSystem.Controllers
             {
                 try
                 {
-                    var status = (from x in _context.ActionActivities where x.ActionId == id select x).FirstOrDefault();
+                    var status = (from x in _context.ActionActivities where x.AutoId == id select x).FirstOrDefault();
                     status.ActionStatus = false;
                     _context.Update(status);
                     await _context.SaveChangesAsync();

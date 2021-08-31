@@ -19,73 +19,93 @@ namespace StoreManagementSystem.Controllers
             _IRepository = IRepository;
         }
         [HttpGet]
-        public IActionResult AddProduct()
+        public async Task<IActionResult> AddProduct()
         {
-            var model = new Product();
-            return View(model);
+            try
+            {
+                var check =await Task.FromResult((from a in _context.ActionActivities where a.ActionId == 1 select a).FirstOrDefault());
+                if (check.ActionStatus == false)
+                {
+                    return Redirect("/Home/Exception");
+                }
+                var model = new Product();
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                return Redirect("/Home/Customexception");
+            }
+
         }
 
         [HttpPost]
         public async Task<IActionResult> AddProduct(Product model)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-                    await _IRepository.AddProduct(model);
-
-                    return RedirectToAction("Index");
-                }
-
-                catch (Exception ex)
-                {
-                    return Redirect("/Product/AddProduct");
-                }
+                await _IRepository.AddProduct(model);
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+
+            catch (Exception ex)
+            {
+                return Redirect("/Home/Customexception");
+            }
         }
         [HttpGet]
         public async Task<IActionResult> EditProduct(int id)
         {
+            var check = await Task.FromResult((from a in _context.ActionActivities where a.ActionId == 2 select a).FirstOrDefault());
+            if (check.ActionStatus == false)
+            {
+                return Redirect("/Home/Exception");
+            }
             var model = new Product();
-            model =await _IRepository.LoadProduct(id);
+            model = await _IRepository.LoadProduct(id);
             return View(model);
         }
 
-        [HttpPut]
+        [HttpPost]
         public IActionResult EditProduct(Product model)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-                    _IRepository.EditProduct(model);
-                    return RedirectToAction("Index");
-                }
-                catch (Exception ex)
-                {
-                    return Redirect("/Product/EditProduct");
-                }
+                _IRepository.EditProduct(model);
+                return RedirectToAction("Index");
             }
+            catch (Exception ex)
+            {
+                return Redirect("/Home/Customexception");
+            }
+        }
+        
+        [HttpGet]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            var check = await Task.FromResult((from a in _context.ActionActivities where a.ActionId == 3 select a).FirstOrDefault());
+            if (check.ActionStatus == false)
+            {
+                return Redirect("/Home/Exception");
+            }
+            await _IRepository.DeActivateProduct(id);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public async Task<IActionResult> DetailsProduct(int id)
         {
+            var check = await Task.FromResult((from a in _context.ActionActivities where a.ActionId == 4 select a).FirstOrDefault());
+            if (check.ActionStatus == false)
+            {
+                return Redirect("/Home/Exception");
+            }
             var model = new Product();
             model = await _IRepository.LoadProduct(id);
             return View(model);
         }
-        [HttpDelete]
-        public async Task<IActionResult> DeleteStudent(int id)
-        {
-            await _IRepository.DeActivateProduct(id);
-            return RedirectToAction("Index");
-        }
         [HttpGet]
         public IActionResult Index()
         {
-            List<Product> products = _context.Products.Where(x=>x.Active == true).ToList();
+            List<Product> products = _context.Products.Where(x => x.Active == true).ToList();
             return View(products);
         }
     }

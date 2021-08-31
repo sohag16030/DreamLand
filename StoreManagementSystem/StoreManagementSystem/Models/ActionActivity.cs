@@ -12,6 +12,7 @@ namespace StoreManagementSystem.Models
     public partial class ActionActivity
     {
         [Key]
+        public long AutoId { get; set; }
         public long ActionId { get; set; }
         [Required]
         [StringLength(500)]

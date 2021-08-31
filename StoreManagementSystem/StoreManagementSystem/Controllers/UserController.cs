@@ -30,21 +30,19 @@ namespace StoreManagementSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> AddUser(User model)
         {
-            if (ModelState.IsValid)
+
+            try
             {
-                try
-                {
-                    await _IRepository.AddUser(model);
+                await _IRepository.AddUser(model);
 
-                    return RedirectToAction("Index");
-                }
-
-                catch (Exception ex)
-                {
-                    return Redirect("/User/AddUser");
-                }
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+
+            catch (Exception ex)
+            {
+                return Redirect("/Home/CustomexceptionforUser");
+            }
+
         }
         [HttpGet]
         public async Task<IActionResult> EditUser(int id)
@@ -54,22 +52,18 @@ namespace StoreManagementSystem.Controllers
             return View(model);
         }
 
-        [HttpPut]
+        [HttpPost]
         public IActionResult EditUser(User model)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-                    _IRepository.EditUser(model);
-                    return RedirectToAction("Index");
-                }
-                catch (Exception ex)
-                {
-                    return Redirect("/User/EditUser");
-                }
+                _IRepository.EditUser(model);
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            catch (Exception ex)
+            {
+                return Redirect("/Home/CustomexceptionforUser");
+            }
         }
         [HttpGet]
         public async Task<IActionResult> DetailsUser(int id)
@@ -78,7 +72,7 @@ namespace StoreManagementSystem.Controllers
             model = await _IRepository.LoadUser(id);
             return View(model);
         }
-        [HttpDelete]
+        [HttpGet]
         public async Task<IActionResult> DeleteUser(int id)
         {
             await _IRepository.DeActivateUser(id);
