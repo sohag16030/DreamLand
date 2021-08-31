@@ -21,14 +21,15 @@
                 <span asp-validation-for="UserRole" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Login" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-controller="User" asp-action="Index">Back to List</a>
+    <h4>No Account,Please Register</h4>
+    <a asp-controller="RegisterLogin" asp-action="Register">Register</a>
 </div>
 
 @section Scripts {

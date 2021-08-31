@@ -66,7 +66,7 @@ namespace StoreManagementSystem.Controllers
 
             catch (Exception ex)
             {
-                throw ex;
+                return Redirect("/RegisterLogin/Register");
             }
 
         }

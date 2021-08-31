@@ -57,7 +57,7 @@ namespace StoreManagementSystem
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=RegisterLogin}/{action=Login}/{id?}");
             });
         }
     }
