@@ -16,6 +16,18 @@ namespace StoreManagementSystem.Repository
         {
             _context = context;
         }
+        public async Task<MessageHelper> Login(User objLogin)
+        {
+            var loginUser = _context.Users.Where(x => x.UserName.Trim().ToLower() == objLogin.UserName.Trim().ToLower() && x.Password == objLogin.Password).FirstOrDefault();
+            if (loginUser == null)
+                throw new Exception("Invalid User Name Or Password");
+            
+            var msg = new MessageHelper();
+            msg.Message = "Login successfull";
+            msg.statuscode = 200;
+
+            return msg;
+        }
         public async Task<MessageHelper> AddUser(User objCreate)
         {
             var count = _context.Users.Where(x => x.UserName.Trim().ToLower() == objCreate.UserName.Trim().ToLower() && x.UserId != objCreate.UserId).Count();

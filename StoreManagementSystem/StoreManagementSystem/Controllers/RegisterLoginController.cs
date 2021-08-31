@@ -37,7 +37,7 @@ namespace StoreManagementSystem.Controllers
                 {
                     await _IRepository.AddUser(model);
 
-                    return Redirect("/User/Index");
+                    return Redirect("Login");
                 }
 
                 catch (Exception ex)
@@ -45,7 +45,30 @@ namespace StoreManagementSystem.Controllers
                     throw ex;
                 }
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Login");
+        }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            var model = new User();
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(User model)
+        {
+            try
+            {
+                await _IRepository.Login(model);
+
+                return Redirect("/User/Index");
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }

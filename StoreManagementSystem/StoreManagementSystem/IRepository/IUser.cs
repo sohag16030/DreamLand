@@ -9,6 +9,7 @@ namespace StoreManagementSystem.IRepository
 {
     public interface IUser
     {
+        public Task<MessageHelper> Login(User objLogin);
         public Task<MessageHelper> AddUser(User objCreate);
         public Task<User> LoadUser(int id);
         public Task<MessageHelper> EditUser(User model);
