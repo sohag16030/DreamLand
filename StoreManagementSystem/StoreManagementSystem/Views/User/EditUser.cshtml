@@ -30,21 +30,6 @@
                 <input asp-for="UserRole" class="form-control" />
                 <span asp-validation-for="UserRole" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastActionDateTime" class="control-label"></label>
-                <input asp-for="LastActionDateTime" class="form-control" />
-                <span asp-validation-for="LastActionDateTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ServerDateTime" class="control-label"></label>
-                <input asp-for="ServerDateTime" class="form-control" />
-                <span asp-validation-for="ServerDateTime" class="text-danger"></span>
-            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

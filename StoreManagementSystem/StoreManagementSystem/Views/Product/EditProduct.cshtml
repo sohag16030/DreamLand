@@ -10,11 +10,7 @@
         <form asp-area="" asp-controller="Product" asp-action="EditProduct" method="post" class="form-horizontal">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProductId" />
-            <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="ProductName" class="control-label"></label>
                 <input asp-for="ProductName" class="form-control" />
@@ -25,20 +21,10 @@
                 <input asp-for="ProductPrice" class="form-control" />
                 <span asp-validation-for="ProductPrice" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
-                </label>
-            </div>
             <div class="form-group">
-                <label asp-for="LastActionDateTime" class="control-label"></label>
-                <input asp-for="LastActionDateTime" class="form-control" />
-                <span asp-validation-for="LastActionDateTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ServerDateTime" class="control-label"></label>
-                <input asp-for="ServerDateTime" class="form-control" />
-                <span asp-validation-for="ServerDateTime" class="text-danger"></span>
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -48,7 +34,6 @@
             <a asp-action="Index">Back to List</a>
         </div>
     </div>
-</div>
 
 
 @section Scripts {
