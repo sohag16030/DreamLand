@@ -79,7 +79,7 @@ namespace StoreManagementSystem.Controllers
             return View(model);
         }
         [HttpPut]
-        public async Task<IActionResult> DeleteStudent(int id)
+        public async Task<IActionResult> DeleteUser(int id)
         {
             await _IRepository.DeActivateUser(id);
             return RedirectToAction("Index");
