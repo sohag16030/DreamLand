@@ -333,3 +333,8 @@ C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1
 C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\TrashAndRecovery\EditInactiveProduct.cshtml.g.cs
 C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\TrashAndRecovery\InactiveUserList.cshtml.g.cs
 C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\TrashAndRecovery\EditInactiveUser.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\ExceptionPageForRegister.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\TrashAndRecovery\EditInactiveProduct.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\TrashAndRecovery\EditInactiveUser.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\TrashAndRecovery\InactiveProductList.cshtml.g.cs
+I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\TrashAndRecovery\InactiveUserList.cshtml.g.cs

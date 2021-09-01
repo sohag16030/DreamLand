@@ -1,13 +1,15 @@
 ﻿@model IEnumerable<StoreManagementSystem.Models.User>
 
     <p>
+        <h4>Settings</h4>
         <a asp-controller="ActionActivity" asp-action="Index">Action Activity Controlling (Settings)</a> 
     </p>
     <p>
+        <h4>Trace And Recovery</h4>
         <a asp-controller="TrashAndRecovery" asp-action="InactiveProductList">Recover Deleted Product</a> |
         <a asp-controller="TrashAndRecovery" asp-action="InactiveUserList">Recover Deleted User</a> 
     </p>
-
+     <h4>***********************</h4>
     <p>
         <a asp-action="AddUser">AddUser</a>
     </p>
