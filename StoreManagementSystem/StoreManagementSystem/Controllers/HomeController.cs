@@ -34,6 +34,10 @@ namespace StoreManagementSystem.Controllers
         public IActionResult CustomexceptionforUser()
         {
             return View();
+        } 
+        public IActionResult ExceptionPageForRegister()
+        {
+            return View();
         }
         public IActionResult Exception()
         {

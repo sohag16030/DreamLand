@@ -31,21 +31,19 @@ namespace StoreManagementSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(User model)
         {
-            if (ModelState.IsValid)
+
+            try
             {
-                try
-                {
-                    await _IRepository.AddUser(model);
+                await _IRepository.AddUser(model);
 
-                    return Redirect("Login");
-                }
-
-                catch (Exception ex)
-                {
-                    return Redirect("Register");
-                }
+                return Redirect("Login");
             }
-            return RedirectToAction("Login");
+
+            catch (Exception ex)
+            {
+                return Redirect("/Home/ExceptionPageForRegister");
+            }
+
         }
         [HttpGet]
         public IActionResult Login()
@@ -60,8 +58,8 @@ namespace StoreManagementSystem.Controllers
             try
             {
                 await _IRepository.Login(model);
-                if(model.UserRole == "Admin" || model.UserRole == "admin")
-                  return Redirect("/User/Index");
+                if (model.UserRole == "Admin" || model.UserRole == "admin")
+                    return Redirect("/User/Index");
                 else
                     return Redirect("/Product/Index");
             }
@@ -77,7 +75,7 @@ namespace StoreManagementSystem.Controllers
         {
             try
             {
-               return Redirect("Login");
+                return Redirect("Login");
             }
 
             catch (Exception ex)

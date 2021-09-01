@@ -42,7 +42,7 @@ namespace StoreManagementSystem.Repository
             {
                 UserId = (from x in _context.Users where x.UserName.Trim().ToLower() == objCreate.UserName.Trim() && x.Active == true select x.UserId).FirstOrDefault(),
                 UserName = objCreate.UserName,
-                UserRole = objCreate.UserRole =="Admin" || objCreate.UserRole == "admin" ? "Admin" : "User",
+                UserRole = objCreate.UserRole == null ? "User" : "Admin",
                 Password = objCreate.Password,
                 ConfirmPassword = objCreate.ConfirmPassword,
                 Active = true,
@@ -83,7 +83,7 @@ namespace StoreManagementSystem.Repository
 
             var exitUser = await Task.FromResult((from a in _context.Users where a.UserId == model.UserId select a).FirstOrDefault());
             exitUser.UserName = model.UserName;
-
+            exitUser.UserRole = model.UserRole;
 
             _context.Users.Update(exitUser);
             _context.SaveChanges();

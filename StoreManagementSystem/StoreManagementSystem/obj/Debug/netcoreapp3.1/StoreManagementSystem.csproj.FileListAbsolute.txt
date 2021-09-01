@@ -324,3 +324,8 @@ I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1
 I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Exception.cshtml.g.cs
 I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Customexception.cshtml.g.cs
 I:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\CustomexceptionforUser.cshtml.g.cs
+C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\ActionActivity\Index.cshtml.g.cs
+C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Customexception.cshtml.g.cs
+C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\CustomexceptionforUser.cshtml.g.cs
+C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Exception.cshtml.g.cs
+C:\DreamLand\StoreManagementSystem\StoreManagementSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\ExceptionPageForRegister.cshtml.g.cs
