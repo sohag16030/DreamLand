@@ -1,0 +1,62 @@
+﻿@model IEnumerable<StoreManagementSystem.Models.User>
+
+
+<h4>InactiveUserList</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfirmPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserRole)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastActionDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServerDateTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfirmPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserRole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastActionDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServerDateTime)
+            </td>
+            <td>
+                <a asp-action="EditInactiveUser" asp-route-id="@item.UserId">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

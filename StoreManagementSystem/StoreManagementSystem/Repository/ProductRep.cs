@@ -79,10 +79,30 @@ namespace StoreManagementSystem.Repository
             msg.statuscode = 200;
             return msg;
         }
+        public async Task<MessageHelper> EditDeletedProduct(Models.Product model)
+        {
+            var countExProduct = _context.Products.Where(x => x.ProductName.Trim().ToLower() == model.ProductName.Trim().ToLower() && x.ProductId != model.ProductId).Count();
+            if (countExProduct > 0)
+                throw new Exception($"{model.ProductName}Product exist");
+
+            var exitProduct = await Task.FromResult((from a in _context.Products where a.ProductId == model.ProductId select a).FirstOrDefault());
+            exitProduct.ProductName = model.ProductName;
+            exitProduct.ProductPrice = model.ProductPrice;
+            exitProduct.Active = model.Active;
+
+            _context.Products.Update(exitProduct);
+            _context.SaveChanges();
+
+            var msg = new MessageHelper();
+            msg.Message = "updated successfully";
+            msg.statuscode = 200;
+            return msg;
+        }
+
 
         public async Task<Models.Product> LoadProduct(int id)
         {
-            var product = await Task.FromResult((from a in _context.Products where id == a.ProductId && a.Active == true select a).FirstOrDefault());
+            var product = await Task.FromResult((from a in _context.Products where id == a.ProductId select a).FirstOrDefault());
             return product;
         }
     }

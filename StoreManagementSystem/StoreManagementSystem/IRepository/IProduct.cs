@@ -12,6 +12,7 @@ namespace StoreManagementSystem.IRepository
         public Task<MessageHelper> AddProduct(Product objCreate);
         public Task<Product> LoadProduct(int id);
         public Task<MessageHelper> EditProduct(Product model);
+        public Task<MessageHelper> EditDeletedProduct(Product model);
         public Task<MessageHelper> DeActivateProduct(int id);
     }
 }

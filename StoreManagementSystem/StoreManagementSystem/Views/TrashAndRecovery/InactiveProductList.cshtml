@@ -1,0 +1,61 @@
+﻿@model IEnumerable<StoreManagementSystem.Models.Product>
+
+<h4>InactiveProductList</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastActionDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServerDateTime)
+            </th>
+            <th>
+                @Html.DisplayName("Action")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastActionDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServerDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.ConfirmPassword)
+            </td>
+            <td>
+                <a asp-controller="TrashAndRecovery" asp-action="EditInactiveProduct" asp-route-id="@item.ProductId">RecoverDeletedProduct</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

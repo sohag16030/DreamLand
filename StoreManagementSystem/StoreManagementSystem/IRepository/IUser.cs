@@ -13,6 +13,7 @@ namespace StoreManagementSystem.IRepository
         public Task<MessageHelper> AddUser(User objCreate);
         public Task<User> LoadUser(int id);
         public Task<MessageHelper> EditUser(User model);
+        public Task<MessageHelper> EditInactiveUser(User model);
         public Task<MessageHelper> DeActivateUser(int id);
     }
 }
