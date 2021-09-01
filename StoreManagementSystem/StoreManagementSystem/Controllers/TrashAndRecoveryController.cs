@@ -62,12 +62,12 @@ namespace StoreManagementSystem.Controllers
             return View(model);
         }
         [HttpPost]
-        public IActionResult EditUser(User model)
+        public IActionResult EditInactiveUser(User model)
         {
             try
             {
                 _iRepository.EditInactiveUser(model);
-                return RedirectToAction("Index");
+                return RedirectToAction("InactiveProductList");
             }
             catch (Exception ex)
             {
