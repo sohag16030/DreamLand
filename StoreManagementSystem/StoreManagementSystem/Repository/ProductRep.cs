@@ -67,14 +67,9 @@ namespace StoreManagementSystem.Repository
             if (countExProduct > 0)
                 throw new Exception($"{model.ProductName}Product exist");
 
-            var countExUser = _context.Products.Where(x => x.UserName.Trim().ToLower() == model.UserName.Trim().ToLower()).Count();
-            if (countExUser == 0)
-                throw new Exception($"{model.UserName}InValid User");
-
             var exitProduct = await Task.FromResult((from a in _context.Products where a.ProductId == model.ProductId select a).FirstOrDefault());
             exitProduct.ProductName = model.ProductName;
             exitProduct.ProductPrice = model.ProductPrice;
-            exitProduct.UserName = model.UserName;
 
              _context.Products.Update(exitProduct);
              _context.SaveChanges();
