@@ -8599,23 +8599,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sohag\\.nuget\\packages\\": {},
+    "C:\\Users\\shoha\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\DreamLand\\StoreManagementSystem\\StoreManagementSystem\\StoreManagementSystem.csproj",
+      "projectUniqueName": "C:\\DreamLand\\StoreManagementSystem\\StoreManagementSystem\\StoreManagementSystem.csproj",
       "projectName": "StoreManagementSystem",
-      "projectPath": "I:\\DreamLand\\StoreManagementSystem\\StoreManagementSystem\\StoreManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\Sohag\\.nuget\\packages\\",
-      "outputPath": "I:\\DreamLand\\StoreManagementSystem\\StoreManagementSystem\\obj\\",
+      "projectPath": "C:\\DreamLand\\StoreManagementSystem\\StoreManagementSystem\\StoreManagementSystem.csproj",
+      "packagesPath": "C:\\Users\\shoha\\.nuget\\packages\\",
+      "outputPath": "C:\\DreamLand\\StoreManagementSystem\\StoreManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sohag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\shoha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
